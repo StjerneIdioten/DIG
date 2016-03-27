@@ -44,6 +44,16 @@
 *_usage.xml
 *_xst.xrpt
 
+
+# ISIM generated files and folders
+*.wdb
+*.xmsgs
+*.log
+*.ini
+*.exe
+*.cmd
+isim/
+
 # iMPACT generated files
 _impactbatch.log
 impact.xsl
