@@ -1,0 +1,9 @@
+[Inputs]
+Clk_in_50
+=Bcd[15:0]=
+=Dp[3:0]=
+[Outputs]
+Clk_out_1
+=Segm[1:8]=
+=An[3:0]=
+[BiDir]

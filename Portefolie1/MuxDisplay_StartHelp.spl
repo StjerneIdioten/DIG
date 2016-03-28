@@ -1,0 +1,7 @@
+[Inputs]
+Clk
+=Sw[1:0]=
+[Outputs]
+=Segm[1:8]=
+=An[3:0]=
+[BiDir]

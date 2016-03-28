@@ -1,0 +1,104 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Stopwatch.vf
+// /___/   /\     Timestamp : 03/28/2016 19:55:47
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog D:/Github/DIG/Portefolie1/Stopwatch.vf -w D:/Github/DIG/Portefolie1/Stopwatch.sch
+//Design Name: Stopwatch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Stopwatch(Clear, 
+                 Clk, 
+                 Lap, 
+                 StartStop, 
+                 An, 
+                 Led, 
+                 Seg);
+
+    input Clear;
+    input Clk;
+    input Lap;
+    input StartStop;
+   output [3:0] An;
+   output [7:0] Led;
+   output [1:8] Seg;
+   
+   wire [7:0] Bcd1_10;
+   wire Clk_1kHz;
+   wire LapTime;
+   wire StSt;
+   wire XLXN_6;
+   wire XLXN_9;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire [3:0] XLXN_17;
+   wire [7:0] XLXN_21;
+   wire [7:0] XLXN_24;
+   wire [15:0] XLXN_37;
+   wire [3:0] XLXN_38;
+   
+   muxdisplay_ver3  XLXI_3 (.Bcd(XLXN_37[15:0]), 
+                           .Clk_50MHz(Clk), 
+                           .Dp(XLXN_38[3:0]), 
+                           .An(An[3:0]), 
+                           .Clk_1kHz(Clk_1kHz), 
+                           .Segm(Seg[1:8]));
+   Toggle_Button3  XLXI_4 (.Button(StartStop), 
+                          .Clk(Clk_1kHz), 
+                          .Deboun(), 
+                          .Pulse(), 
+                          .Toggle(StSt));
+   Toggle_Button3  XLXI_5 (.Button(Lap), 
+                          .Clk(Clk_1kHz), 
+                          .Deboun(), 
+                          .Pulse(), 
+                          .Toggle(LapTime));
+   Toggle_Button3  XLXI_6 (.Button(Clear), 
+                          .Clk(Clk_1kHz), 
+                          .Deboun(), 
+                          .Pulse(XLXN_6), 
+                          .Toggle());
+   Cnt999  XLXI_7 (.Clk(Clk_1kHz), 
+                  .Clr(XLXN_9), 
+                  .En(StSt), 
+                  .Bcd1_10(XLXN_17[3:0]), 
+                  .Rco(XLXN_16));
+   Cnt59  XLXI_8 (.Clk(Clk_1kHz), 
+                 .Clr(XLXN_9), 
+                 .En(XLXN_16), 
+                 .Bcd59(XLXN_21[7:0]), 
+                 .Rco(XLXN_15));
+   Cnt59  XLXI_9 (.Clk(Clk_1kHz), 
+                 .Clr(XLXN_9), 
+                 .En(XLXN_15), 
+                 .Bcd59(XLXN_24[7:0]), 
+                 .Rco());
+   TeenthSec  XLXI_10 (.Bcd1_10(XLXN_17[3:0]), 
+                      .Leds(Bcd1_10[7:0]));
+   Blinking  XLXI_11 (.HalfSec(Bcd1_10[4]), 
+                     .Lap(LapTime), 
+                     .StartStop(StSt), 
+                     .Dp(XLXN_38[3:0]));
+   Lap_Time_Latch  XLXI_12 (.BcdMin(XLXN_24[7:0]), 
+                           .BcdSec(XLXN_21[7:0]), 
+                           .Bcd1_10(Bcd1_10[7:0]), 
+                           .Latch(LapTime), 
+                           .Bcd(XLXN_37[15:0]), 
+                           .Leds(Led[7:0]));
+   AND2B1  XLXI_13 (.I0(StSt), 
+                   .I1(XLXN_6), 
+                   .O(XLXN_9));
+endmodule

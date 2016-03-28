@@ -1,0 +1,5 @@
+[Inputs]
+=Bcd1_10[3:0]=
+[Outputs]
+=Leds[7:0]=
+[BiDir]

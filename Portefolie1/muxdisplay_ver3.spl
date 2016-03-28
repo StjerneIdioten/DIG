@@ -1,0 +1,9 @@
+[Inputs]
+Clk_50MHz
+=Bcd[15:0]=
+=Dp[3:0]=
+[Outputs]
+Clk_1kHz
+=Segm[1:8]=
+=An[3:0]=
+[BiDir]

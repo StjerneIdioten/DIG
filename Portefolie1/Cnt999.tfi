@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+Cnt999 instance_name (
+    .En(En), 
+    .Clr(Clr), 
+    .Clk(Clk), 
+    .Bcd1_10(Bcd1_10), 
+    .Rco(Rco)
+    );
+
+

@@ -1,0 +1,7 @@
+[Inputs]
+StartStop
+Lap
+HalfSec
+[Outputs]
+=Dp[3:0]=
+[BiDir]

@@ -1,0 +1,9 @@
+[Inputs]
+Latch
+=Bcd1_10[7:0]=
+=BcdSec[7:0]=
+=BcdMin[7:0]=
+[Outputs]
+=Leds[7:0]=
+=Bcd[15:0]=
+[BiDir]

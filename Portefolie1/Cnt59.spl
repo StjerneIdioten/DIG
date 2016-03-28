@@ -1,0 +1,8 @@
+[Inputs]
+En
+Clr
+Clk
+[Outputs]
+Rco
+=Bcd59[7:0]=
+[BiDir]

@@ -1,0 +1,5 @@
+[Inputs]
+=Hex[3:0]=
+[Outputs]
+=abcdefg[1:7]=
+[BiDir]
