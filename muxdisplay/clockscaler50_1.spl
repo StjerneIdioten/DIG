@@ -1,0 +1,6 @@
+[Inputs]
+clock_in
+=clock_select[1:0]=
+[Outputs]
+clock_out
+[BiDir]

@@ -1,3 +1,5 @@
 MODULE muxdisplay
 	SUBMODULE HexToSevenSegment
 		INSTANCE XLXI_1
+	SUBMODULE clockscaler50_1
+		INSTANCE XLXI_2

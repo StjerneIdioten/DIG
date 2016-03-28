@@ -9,23 +9,23 @@
 
 
 # clock pin for Nexys 2 Board
-#NET "clk"   LOC = "B8"; # Bank = 0, Pin name = IP_L13P_0/GCLK8, Type = GCLK, Sch name = GCLK0
+NET "Clk"   LOC = "B8"; # Bank = 0, Pin name = IP_L13P_0/GCLK8, Type = GCLK, Sch name = GCLK0
 #NET "clk1" LOC = "U9"; # Bank = 2, Pin name = IO_L13P_2/D4/GCLK14, Type = DUAL/GCLK, Sch name = GCLK1
 
 # 7 segment display
-NET "SEGMENTS<0>" LOC = "L18"; # Bank = 1, Pin name = IO_L10P_1, Type = I/O, Sch name = CA
-NET "SEGMENTS<1>" LOC = "F18"; # Bank = 1, Pin name = IO_L19P_1, Type = I/O, Sch name = CB
-NET "SEGMENTS<2>" LOC = "D17"; # Bank = 1, Pin name = IO_L23P_1/HDC, Type = DUAL, Sch name = CC
-NET "SEGMENTS<3>" LOC = "D16"; # Bank = 1, Pin name = IO_L23N_1/LDC0, Type = DUAL, Sch name = CD
-NET "SEGMENTS<4>" LOC = "G14"; # Bank = 1, Pin name = IO_L20P_1, Type = I/O, Sch name = CE
-NET "SEGMENTS<5>" LOC = "J17"; # Bank = 1, Pin name = IO_L13P_1/A6/RHCLK4/IRDY1, Type = RHCLK/DUAL, Sch name = CF
-NET "SEGMENTS<6>" LOC = "H14"; # Bank = 1, Pin name = IO_L17P_1, Type = I/O, Sch name = CG
-NET "SEGMENTS<7>" LOC = "C17"; # Bank = 1, Pin name = IO_L24N_1/LDC2, Type = DUAL, Sch name = DP
+NET "Segm<1>" LOC = "L18"; # Bank = 1, Pin name = IO_L10P_1, Type = I/O, Sch name = CA
+NET "Segm<2>" LOC = "F18"; # Bank = 1, Pin name = IO_L19P_1, Type = I/O, Sch name = CB
+NET "Segm<3>" LOC = "D17"; # Bank = 1, Pin name = IO_L23P_1/HDC, Type = DUAL, Sch name = CC
+NET "Segm<4>" LOC = "D16"; # Bank = 1, Pin name = IO_L23N_1/LDC0, Type = DUAL, Sch name = CD
+NET "Segm<5>" LOC = "G14"; # Bank = 1, Pin name = IO_L20P_1, Type = I/O, Sch name = CE
+NET "Segm<6>" LOC = "J17"; # Bank = 1, Pin name = IO_L13P_1/A6/RHCLK4/IRDY1, Type = RHCLK/DUAL, Sch name = CF
+NET "Segm<7>" LOC = "H14"; # Bank = 1, Pin name = IO_L17P_1, Type = I/O, Sch name = CG
+NET "Segm<8>" LOC = "C17"; # Bank = 1, Pin name = IO_L24N_1/LDC2, Type = DUAL, Sch name = DP
 
-NET "ANODES<0>" LOC = "F17"; # Bank = 1, Pin name = IO_L19N_1, Type = I/O, Sch name = AN0
-NET "ANODES<1>" LOC = "H17"; # Bank = 1, Pin name = IO_L16N_1/A0, Type = DUAL, Sch name = AN1
-NET "ANODES<2>" LOC = "C18"; # Bank = 1, Pin name = IO_L24P_1/LDC1, Type = DUAL, Sch name = AN2
-NET "ANODES<3>" LOC = "F15"; # Bank = 1, Pin name = IO_L21P_1, Type = I/O, Sch name = AN3
+NET "An<0>" LOC = "F17"; # Bank = 1, Pin name = IO_L19N_1, Type = I/O, Sch name = AN0
+NET "An<1>" LOC = "H17"; # Bank = 1, Pin name = IO_L16N_1/A0, Type = DUAL, Sch name = AN1
+NET "An<2>" LOC = "C18"; # Bank = 1, Pin name = IO_L24P_1/LDC1, Type = DUAL, Sch name = AN2
+NET "An<3>" LOC = "F15"; # Bank = 1, Pin name = IO_L21P_1, Type = I/O, Sch name = AN3
 
 # Leds
 #NET "pwm<0>"  LOC = "J14"; # Bank = 1, Pin name = IO_L14N_1/A3/RHCLK7, Type = RHCLK/DUAL, Sch name = JD10/LD0
@@ -42,14 +42,14 @@ NET "ANODES<3>" LOC = "F15"; # Bank = 1, Pin name = IO_L21P_1, Type = I/O, Sch n
 #NET "Led<7>" LOC = "P4";  # Bank = 3, Pin name = N.C., Type = N.C., Sch name = LD7? other than s3e500
 
 # Switches
-NET "HEX<0>" LOC = "G18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW0
-NET "HEX<1>" LOC = "H18"; # Bank = 1, Pin name = IP/VREF_1, Type = VREF, Sch name = SW1
-NET "HEX<2>" LOC = "K18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW2
-NET "HEX<3>" LOC = "K17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW3
-NET "SWITCHES<0>" LOC = "L14"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW4
-NET "SWITCHES<1>" LOC = "L13"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW5
-NET "SWITCHES<2>" LOC = "N17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW6
-NET "SWITCHES<3>" LOC = "R17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW7
+NET "SW<0>" LOC = "G18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW0
+NET "SW<1>" LOC = "H18"; # Bank = 1, Pin name = IP/VREF_1, Type = VREF, Sch name = SW1
+#NET "HEX<2>" LOC = "K18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW2
+#NET "HEX<3>" LOC = "K17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW3
+#NET "SWITCHES<0>" LOC = "L14"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW4
+#NET "SWITCHES<1>" LOC = "L13"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW5
+#NET "SWITCHES<2>" LOC = "N17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW6
+#NET "SWITCHES<3>" LOC = "R17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW7
 
 # Buttons
 

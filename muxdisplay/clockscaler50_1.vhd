@@ -30,8 +30,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity clockscaler50_1 is
-    Port ( clock_in : in  STD_LOGIC;
-           clock_out : out  STD_LOGIC);
+	Generic(n : integer := 20); -- Values from 0 to 20
+
+   Port ( clock_in : in  STD_LOGIC;
+			 clock_out : out  STD_LOGIC;
+			 clock_select : in STD_LOGIC_VECTOR(1 downto 0));
 end clockscaler50_1;
 
 architecture Behavioral of clockscaler50_1 is
