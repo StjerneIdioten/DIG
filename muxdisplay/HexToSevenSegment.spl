@@ -1,0 +1,7 @@
+[Inputs]
+=HEX[3:0]=
+=ANODE_SELECT[3:0]=
+[Outputs]
+=SEGMENTS[7:0]=
+=ANODES[3:0]=
+[BiDir]

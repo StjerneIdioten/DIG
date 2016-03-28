@@ -1,0 +1,3 @@
+MODULE muxdisplay
+	SUBMODULE HexToSevenSegment
+		INSTANCE XLXI_1
