@@ -28,14 +28,14 @@ NET "Enable<2>" LOC = "C18"; # Bank = 1, Pin name = IO_L24P_1/LDC1, Type = DUAL,
 NET "Enable<3>" LOC = "F15"; # Bank = 1, Pin name = IO_L21P_1, Type = I/O, Sch name = AN3
 
 # Leds
-#NET "led<0>"  LOC = "J14"; # Bank = 1, Pin name = IO_L14N_1/A3/RHCLK7, Type = RHCLK/DUAL, Sch name = JD10/LD0
+NET "led<0>"  LOC = "J14"; # Bank = 1, Pin name = IO_L14N_1/A3/RHCLK7, Type = RHCLK/DUAL, Sch name = JD10/LD0
 #NET "led<1>"  LOC = "J15"; # Bank = 1, Pin name = IO_L14P_1/A4/RHCLK6, Type = RHCLK/DUAL, Sch name = JD9/LD1
 #NET "led<2>"  LOC = "K15"; # Bank = 1, Pin name = IO_L12P_1/A8/RHCLK2, Type = RHCLK/DUAL, Sch name = JD8/LD2
 #NET "led<3>"  LOC = "K14"; # Bank = 1, Pin name = IO_L12N_1/A7/RHCLK3/TRDY1, Type = RHCLK/DUAL, Sch name = JD7/LD3
-NET "M1_Led<0>"  LOC = "E17"; # Bank = 1, Pin name = IO, Type = I/O, Sch name = LD4? s3e500 only
-NET "M1_Led<1>"  LOC = "P15"; # Bank = 1, Pin name = IO, Type = I/O, Sch name = LD5? s3e500 only
-NET "M2_Led<0>"  LOC = "F4";  # Bank = 3, Pin name = IO, Type = I/O, Sch name = LD6? s3e500 only
-NET "M2_Led<1>"  LOC = "R4";  # Bank = 3, Pin name = IO/VREF_3, Type = VREF, Sch name = LD7? s3e500 only
+#NET "M1_Led<0>"  LOC = "E17"; # Bank = 1, Pin name = IO, Type = I/O, Sch name = LD4? s3e500 only
+#NET "M1_Led<1>"  LOC = "P15"; # Bank = 1, Pin name = IO, Type = I/O, Sch name = LD5? s3e500 only
+#NET "M2_Led<0>"  LOC = "F4";  # Bank = 3, Pin name = IO, Type = I/O, Sch name = LD6? s3e500 only
+#NET "M2_Led<1>"  LOC = "R4";  # Bank = 3, Pin name = IO/VREF_3, Type = VREF, Sch name = LD7? s3e500 only
 
 #NET "Led<4>" LOC = "E16"; # Bank = 1, Pin name = N.C., Type = N.C., Sch name = LD4? other than s3e500
 #NET "Led<5>" LOC = "P16"; # Bank = 1, Pin name = N.C., Type = N.C., Sch name = LD5? other than s3e500
@@ -43,7 +43,7 @@ NET "M2_Led<1>"  LOC = "R4";  # Bank = 3, Pin name = IO/VREF_3, Type = VREF, Sch
 #NET "Led<7>" LOC = "P4";  # Bank = 3, Pin name = N.C., Type = N.C., Sch name = LD7? other than s3e500
 
 # Switches
-NET "Toggle_Display" LOC = "G18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW0
+#NET "Toggle_Display" LOC = "G18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW0
 #NET "sw<1>" LOC = "H18"; # Bank = 1, Pin name = IP/VREF_1, Type = VREF, Sch name = SW1
 #NET "sw<2>" LOC = "K18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW2
 #NET "sw<3>" LOC = "K17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW3
@@ -57,7 +57,7 @@ NET "Toggle_Display" LOC = "G18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch n
 NET "M1_Pan_Z" LOC = "B18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = BTN0
 #NET "btn<0>" LOC = "D18"; # Bank = 1, Pin name = IP/VREF_1, Type = VREF, Sch name = BTN1
 #NET "btn<1>" LOC = "E18"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = BTN2
-NET "M2_Tilt_Z" LOC = "H13"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = BTN3
+#NET "M2_Tilt_Z" LOC = "H13"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = BTN3
 
 # JA1
 
@@ -74,12 +74,12 @@ NET "M2_Tilt_Z" LOC = "H13"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name =
 
 #NET "NOC"			LOC = "L15"; #JA1
 #NET "NOC"			LOC = "K12"; #JA2
-NET "SPI_Clk"		LOC = "L17"; #JA3
-NET "SPI_MISO"	LOC = "M15"; #JA4
+#NET "SPI_Clk"		LOC = "L17"; #JA3
+#NET "SPI_MISO"	LOC = "M15"; #JA4
 #NET "NOC"			LOC = "K13"; #JA7
 #NET "NOC"			LOC = "L16"; #JA8
-NET "SPI_SS"		LOC = "M14"; #JA9
-NET "SPI_MOSI"	LOC = "M16"; #JA10
+#NET "SPI_SS"		LOC = "M14"; #JA9
+#NET "SPI_MOSI"	LOC = "M16"; #JA10
 
 #JB1
 
@@ -95,21 +95,21 @@ NET "SPI_MOSI"	LOC = "M16"; #JA10
 #JC1
 
 #NET "NOC"	      LOC = "G15"; #JC1
-NET "H_I_0_Pan" LOC = "J16"; #JC2
-NET "M1_H_A" LOC = "G13"; #JC3
-NET "M2_H_A"	 LOC = "H16"; #JC4
+#NET "H_I_0_Pan" LOC = "J16"; #JC2
+#NET "M1_H_A" LOC = "G13"; #JC3
+#NET "M2_H_A"	 LOC = "H16"; #JC4
 #NET "NOC"	 LOC = "H15"; #JC7
-NET "H_I_1_Tilt"	 LOC = "F14"; #JC8
-NET "M1_H_B"	 LOC = "G16"; #JC9
-NET "M2_H_B"	 LOC = "J12"; #JC10
+#NET "H_I_1_Tilt"	 LOC = "F14"; #JC8
+#NET "M1_H_B"	 LOC = "G16"; #JC9
+#NET "M2_H_B"	 LOC = "J12"; #JC10
 
 #JD1
 
 #NET "NOC"	 LOC = "J13"; #JD1
-NET "M1_Pan<0>"	 LOC = "M18"; #JD2
-NET "M1_Pan_E"	 LOC = "N18"; #JD3
-NET "M2_Tilt<1>"	 LOC = "P18"; #JD4
+#NET "M1_Pan<0>"	 LOC = "M18"; #JD2
+#NET "M1_Pan_E"	 LOC = "N18"; #JD3
+#NET "M2_Tilt<1>"	 LOC = "P18"; #JD4
 #NET "NOC"	 LOC = "K14"; #JD7
-NET "M1_Pan<1>"	 LOC = "K15"; #JD8
-NET "M2_Tilt<0>"	 LOC = "J15"; #JD9
-NET "M2_Tilt_E"	 LOC = "J14"; #JD10
+#NET "M1_Pan<1>"	 LOC = "K15"; #JD8
+#NET "M2_Tilt<0>"	 LOC = "J15"; #JD9
+#NET "M2_Tilt_E"	 LOC = "J14"; #JD10
