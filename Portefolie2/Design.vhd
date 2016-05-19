@@ -36,7 +36,7 @@ entity Design is
     Port ( Clk : in  STD_LOGIC;
 			  Button1 : in STD_LOGIC;
 			  HighScore_Toggle : in STD_LOGIC;
-			  Led : out STD_LOGIC;
+			  Led : out STD_LOGIC_VECTOR(7 downto 0);
 			  Enable : out STD_LOGIC_VECTOR(3 downto 0);
 			  Seg : out STD_LOGIC_VECTOR(7 downto 0);
 			  Status : out STD_LOGIC_VECTOR(3 downto 0)
@@ -52,7 +52,7 @@ architecture Behavioral of Design is
 	signal Button1_Push : STD_LOGIC := '0';
 	signal Button1_Pulse : STD_LOGIC := '0';
 	signal Score : STD_LOGIC_VECTOR(11 downto 0) := (others=>'0');
-	signal HighScore : STD_LOGIC_VECTOR(11 downto 0) := (others=>'0');
+	signal HScore : STD_LOGIC_VECTOR(11 downto 0) := (others=>'0');
 	signal Rand : STD_LOGIC_VECTOR(12 downto 0) := (others =>'0');
 
 begin
@@ -66,7 +66,7 @@ begin
 		Pulse=>Button1_Pulse
 	);
 
-	NumberToBcd : entity work.NumberToBcd
+	NumberToBcdScore : entity work.NumberToBcd
 		port map(
 		Clk=>Clk,
 		Number=>Numb_To_Display,
@@ -105,16 +105,16 @@ begin
 		Button1_Push => Button1_Push,
 		Button1_Pulse => Button1_Pulse,
 		Score => Score,
-		HighScore => HighScore,
+		HScore => HScore,
 		Rand => Rand,
-		Led => Led,
-		Status => Status
+		Led => Led
+		--Status => Status
 	);
 	
 	--Toggle if score or highscore is displayed
 	with HighScore_Toggle select Numb_To_Display <=
 		Score when '0',
-		HighScore when '1',
+		HScore when '1',
 		(others=>'X') when others;
 
 end Behavioral;

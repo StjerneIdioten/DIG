@@ -15,6 +15,7 @@ package Projekt_Data is
 --***General***--
 CONSTANT CLOCK_SCALING : INTEGER := 50000;
 CONSTANT RANDOM_OFFSET : INTEGER := 1000;
+CONSTANT FLASHING_TICKS : INTEGER := 250;
 
 -- type <new_type> is
 --  record
