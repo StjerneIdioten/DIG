@@ -38,7 +38,8 @@ entity Design is
 			  HighScore_Toggle : in STD_LOGIC;
 			  Led : out STD_LOGIC;
 			  Enable : out STD_LOGIC_VECTOR(3 downto 0);
-			  Seg : out STD_LOGIC_VECTOR(7 downto 0)
+			  Seg : out STD_LOGIC_VECTOR(7 downto 0);
+			  Status : out STD_LOGIC_VECTOR(3 downto 0)
 	 );
 end Design;
 
@@ -99,13 +100,15 @@ begin
 	Game : entity work.Game
 		port map (
 		Clk => Clk,
+		Clk_Scaled => Clk_Scaled,
 		Button1_Toggle => Button1_Toggle,
 		Button1_Push => Button1_Push,
 		Button1_Pulse => Button1_Pulse,
 		Score => Score,
 		HighScore => HighScore,
 		Rand => Rand,
-		Led => Led
+		Led => Led,
+		Status => Status
 	);
 	
 	--Toggle if score or highscore is displayed
